@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #131316;
+  color: rgba(250, 255, 255,.8);
+  font-family: sans-serif;
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(pictures/IMG-1526.jpg);
+  color: rgba(0,0,0,.75);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  padding: 30px 10%;
+}
+
+.title {
+  font-size: 60px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: rgba(100, 17, 26,.7);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: rgba(20,0,0,.7);
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: rgba(92, 138, 138,.5);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+}
+
+.header-text {
+  margin-top: 40%;
+  font-size: 30px;
+  text-align: right;
+}
+
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: rgba(0, 17, 26,.7);
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/*-----------------------------------ABOUT ME----------------------------------*/
+#about {
+  padding: 80px 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1 {
+  flex-basis: 60%;
+}
+
+.about-col-2 {
+  flex-basis: 35%;
+}
+
+.about-col-2 img {
+  width: 200%;
+  border-radius: 15px;
+}
+
+.sub-title2 {
+  font-size: 60px;
+  font-weight: 600;
+  color: rgba(255, 255, 255);
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: rgb(12, 238, 238);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: rgb(12, 238, 238);
+  font-size: 18px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/*------------------------------MY WORK EXPERIENCE------------------*/
+#exp {
+  padding: 40px 0;
+}
+
+.exp-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.exp-list div {
+  background: rgba(41, 61, 61,.6);
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 15px;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.exp-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.exp-list div h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.exp-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.exp-list div:hover {
+  background: rgb(117, 163, 163);
+  transform: translateY(-10px);
+}
+
+
+/*-----------------------MY HOBBY'S------------------------------------------*/
+#hobby {
+  padding: 50px 0;
+}
+
+.hobby-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.hobby1 {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.hobby1 img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 1s;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,.5), rgb(117, 163, 163));
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.7s;
+}
+
+.layer h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hobby1:hover img {
+  transform: scale(1.1);
+}
+
+.hobby1:hover .layer {
+  height: 100%;
+}
+
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid rgb(117, 163, 163);
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+}
+
+/*-------------------------------CONTACT---------------------------------*/
+.contacts {
+  flex-basis: 35%;
+}
+
+.contacts p {
+  margin-top: 30px;
+}
+
+.contacts p i {
+  color: rgb(117, 163, 163);
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  background: rgba(117, 163, 163,.2);
+  font-weight: 400;
+  margin-top: 30px;
+}
+/*--------------------------------RESPONSIVE/PHONE------------------------*/
+nav .fa-solid {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    display: none;
+  }
+
+  #header {
+    background-image: url(pictures/background-phone.png);
+  }
+
+  .header-text h2 {
+    font-size: 40px;
+  }
+
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
+    background: rgba(117, 163, 163,.9);
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.4s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  .sub-title2 {
+    font-size: 30px;
+  }
+
+  .about-col-1, .about-col-2 {
+    flex-basis: 50%;
+    margin-right: 20px;
+  }
+  .about-col-2 {
+    margin-bottom: 30px;
+  }
+
+  .about-col-1 {
+    font-size: 14px;
+  }
+
+  .tab-links {
+    font-size: 16px;
+  }
+}
