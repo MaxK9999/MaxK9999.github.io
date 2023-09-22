@@ -71,7 +71,7 @@ nav ul li a:hover:after {
 }
 
 .header-text {
-  margin-top: 40%;
+  margin-top: 32%;
   font-size: 30px;
   text-align: right;
 }
@@ -327,8 +327,12 @@ nav .fa-solid {
     background-image: url(pictures/background-phone.png);
   }
 
+  .header-text h1 {
+    font-size: 26px;
+  }
   .header-text h2 {
-    font-size: 40px;
+    font-size: 16px;
+    font-weight: 600;
   }
 
   nav .fa-solid {
@@ -364,16 +368,18 @@ nav .fa-solid {
     font-size: 30px;
   }
 
-  .about-col-1, .about-col-2 {
-    flex-basis: 50%;
+  .about-col-1 {
+    flex-basis: 100%;
     margin-right: 20px;
   }
   .about-col-2 {
+    flex-basis: 50%;
     margin-bottom: 30px;
   }
 
   .about-col-1 {
     font-size: 14px;
+    
   }
 
   .tab-links {
