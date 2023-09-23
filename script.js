@@ -47,3 +47,9 @@ function toggleMenu() {
         openmenu();
     }
 }
+
+// lightbox.js
+lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true
+  });
