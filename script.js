@@ -47,5 +47,3 @@ function toggleMenu() {
         openmenu();
     }
 }
-
-//paragraph opener in work experience
