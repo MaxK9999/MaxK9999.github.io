@@ -310,10 +310,17 @@ section {
   margin-top: 30px;
 }
 
-.contacts p i {
-  color: rgb(117, 163, 163);
-  margin-right: 15px;
-  font-size: 25px;
+.docs {
+  text-decoration: none;
+  justify-content: space-between;
+  display: flex;
+  margin-top: 16px;
+  color: white;
+}
+
+.docs:hover {
+  text-decoration: underline;
+  color: white;
 }
 
 input, select, textarea {
@@ -329,15 +336,17 @@ input, select, textarea {
 }
 
 input[type=submit] {
-  background-color: rgb(180, 217, 255);
+  background-color: rgb(197, 222, 247);
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 input[type=submit]:hover {
-  background-color: rgb(181, 255, 255);
+  background-color: rgb(48, 248, 248);
+  transition: 0.5s;
 }
 
 .copyright {
@@ -347,6 +356,7 @@ input[type=submit]:hover {
   background: rgba(117, 163, 163,.2);
   font-weight: 400;
   margin-top: 30px;
+  bottom: 0;
 }
 /*--------------------------------RESPONSIVE/PHONE------------------------*/
 nav .fa-solid {
